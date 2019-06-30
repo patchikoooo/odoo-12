@@ -1,0 +1,36 @@
+Step 1
+Ubuntu 18.04 supplied with both Python 3 and Python 2 pre-installed.
+To make sure that our versions are up-to-date, let’s update and upgrade the system with apt-get:
+
+$ sudo apt-get update
+$ sudo apt-get -y upgrade
+The -y flag will confirm that we are agreeing for all items to be installed.
+
+
+Step 2
+Once the process is complete, we can check the version of Python 3 that is installed in the system by typing:
+
+$ python3 --version
+You will receive output in the terminal window that will let you know the version number. The version number may vary, but it will look similar to this:
+
+Output
+Python 3.6.5
+
+
+Step 3
+To manage software packages for Python, let’s install pip:
+
+$ sudo apt-get install -y python3-pip
+A tool for use with Python, pip installs and manages programming packages we may want to use in our development projects.
+
+You can install Python packages by typing:
+
+$ pip3 install package_name
+Here, package_name can refer to any Python package or library, such as Django for web development or NumPy for scientific computing.
+
+So if you would like to install Pandas, you can do so with the command pip3 install pandas.
+
+There are a few more packages and development tools to install to ensure that we have a robust set-up for our programming environment:
+
+$ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+Once Python is set up, and pip and other tools are installed, we can set up a virtual environment for our development projects.
