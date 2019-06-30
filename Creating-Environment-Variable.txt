@@ -1,0 +1,52 @@
+Step 1
+Virtual environments enable you to have an isolated space on your computer for Python projects, ensuring that each of your projects can have its own set of dependencies that won’t disrupt any of your other projects.
+
+Setting up a programming environment provides us with greater control over our Python projects and over how different versions of packages are handled. This is especially important when working with third-party packages.
+
+You can set up as many Python programming environments as you want. Each environment is basically a directory or folder in your computer that has a few scripts in it to make it act as an environment.
+
+We need to first install the venv module, part of the standard Python 3 library, so that we can create virtual environments. Let’s install venv venv by typing:
+
+$ sudo apt-get install -y python3-venv
+
+
+Step 2
+With this installed, we are ready to create environments.
+
+Let’s choose which directory we would like to put our Python programming environments in, or we can create a new directory with mkdir, as in:
+
+$ mkdir environments
+$ cd environments
+
+
+Step3
+Once you are in the directory where you would like the environments to live, you can create an environment by running the following command:
+
+$ python3 -m venv project_env
+
+Essentially, this sets up a new directory that contains a few items which we can view with the ls command:
+
+$ ls project_env
+Output
+bin include lib lib64 pyvenv.cfg share
+
+Together, these files work to make sure that your projects are isolated from the broader context of your local machine, so that system files and project files don’t mix. This is good practice for version control and to ensure that each of your projects has access to the particular packages that it needs.
+
+Python Wheels, a built-package format for Python that can speed up your software production by reducing the number of times you need to compile, will be in the Ubuntu 18.04 share directory.
+
+
+Step4
+To use this environment, you need to activate it, which you can do by typing the following command that calls the activate script:
+
+$ source project_env/bin/activate
+Your prompt will now be prefixed with the name of your environment, in this case it is called project_env.
+
+Your prefix may look somewhat different, but the name of your environment in parentheses should be the first thing you see on your line:
+
+(project_env) bobby@bobby:~/environments$
+This prefix lets us know that the environment project_env is currently active, meaning that when we create programs here they will use only this particular environment’s settings and packages.
+
+Note: Within the virtual environment, you can use the command python instead of python3, and pip instead of pip3 if you would prefer. If you use Python 3 on your machine outside of an environment, you will need to use the python3 and pip3 commands exclusively.
+
+After following these steps, your virtual environment is ready to use.
+
