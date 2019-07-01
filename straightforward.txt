@@ -1,0 +1,9 @@
+Step 1 - $ sudo apt-get install -y python3-venv
+Step 2 - $ mkdir environments
+         $cd environments
+Step 3 - $ ls project_env --> check output
+Step 4 - $ source project_env/bin/activate --> activate venv
+Step 5 - $ pip3 install package name --> install packages
+Step 6 - $ pip3 freeze > requirements.txt --> save the environment packages into txt file 
+Step 7 - $ pip3 install -r requirements.txt
+Step 8 - $ deactivate --> deactivate after using
