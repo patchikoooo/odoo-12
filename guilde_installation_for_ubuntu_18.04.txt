@@ -9,6 +9,7 @@ STEP 2
 sudo apt-get -y upgrade
 STEP 3
 sudo apt-get install python3-pip
+sudo apt-get install vim
 INSTALL DEPENDENCIES USING PIP3
 pip3 install Babel decorator docutils ebaysdk feedparser gevent greenlet html2text Jinja2 lxml Mako MarkupSafe mock num2words ofxparse passlib Pillow psutil psycogreen psycopg2 pydot pyparsing PyPDF2 pyserial python-dateutil python-openid pytz pyusb PyYAML qrcode reportlab requests six suds-jurko vatnumber vobject Werkzeug XlsxWriter xlwt xlrd
 STEP 4
@@ -17,7 +18,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo npm install -g less less-plugin-clean-css
 sudo apt-get install node-less
 STEP 5
-sudo apt-get install python-software-properties
+sudo apt-get install python-software-properties     or      software-properties-common
 sudo vim /etc/apt/sources.list.d/pgdg.list
 add a line for the repository
 deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
@@ -82,7 +83,7 @@ addons_path = /opt/odoo/addons,/opt/odoo/odoo/addons
 
 ---------------------------------------------------
 
-sudo chown odoo: /etc/odoo.conf
+sudo chown odoo: /etc/odoo.conf   --> change file owner and group
 STEP 12
 sudo apt-get -f install
 sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
